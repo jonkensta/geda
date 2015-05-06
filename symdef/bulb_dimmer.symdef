@@ -1,0 +1,37 @@
+# This is a sample symbol definition for documenting djboxsym.  Some
+# of the pins have been intentionally mistyped in order to demonstrate
+# all combinations of flags.  DO NOT USE AS A CP2201 REFERENCE!
+
+[labels]
+
+bulb_dimmer
+refdes=S?
+! copyright=none
+! author=none
+! uselicense=unlimited
+! distlicense=GPL
+! device=none
+! description=none
+! footprint=none
+! source=bulb_dimmer.sch
+
+[left]
+
+1 TRIAC
+
+3 AC_IN_N
+2 AC_IN_P
+
+[right]
+
+4 ZC
+
+5 AC_OUT_P
+6 AC_OUT_N
+
+[top]
+
+7 VCC
+
+[bottom]
+8 GND

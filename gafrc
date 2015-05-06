@@ -1,0 +1,2 @@
+(source-library "sch")
+(component-library "sym" "sym")
