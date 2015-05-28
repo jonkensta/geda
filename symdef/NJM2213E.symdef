@@ -1,0 +1,35 @@
+# This is a sample symbol definition for documenting djboxsym.  Some
+# of the pins have been intentionally mistyped in order to demonstrate
+# all combinations of flags.  DO NOT USE AS A CP2201 REFERENCE!
+
+[labels]
+
+NJM2113E
+refdes=U?
+! copyright=none
+! author=none
+! uselicense=unlimited
+! distlicense=GPL
+! device=none
+! description=none
+! footprint=none
+
+[left]
+
+4 -IN
+3 +IN
+2 Vref
+
+[right]
+
+5 -OUT
+8 +OUT
+
+[top]
+
+6 Vcc
+
+[bottom]
+
+7 GND
+1 CD

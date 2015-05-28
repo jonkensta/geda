@@ -1,0 +1,52 @@
+# This is a sample symbol definition for documenting djboxsym.  Some
+# of the pins have been intentionally mistyped in order to demonstrate
+# all combinations of flags.  DO NOT USE AS A CP2201 REFERENCE!
+
+[labels]
+
+arduino_shield
+refdes=S?
+! copyright=none
+! author=none
+! uselicense=unlimited
+! distlicense=GPL
+! device=none
+! description=none
+! footprint=none
+! source=arduino_shield.sch
+
+[left]
+
+1  RESET
+2  3.3V
+3  5V
+4  GND
+6  GND
+7  Vin
+
+8  A0
+9  A1
+10 A2
+11 A3
+12 A4
+13 A5
+
+[right]
+
+
+14 AREF
+15 GND
+16 13
+18 12
+19 11
+20 10
+21 9
+22 8
+23 7
+24 6
+25 5
+26 4
+27 3
+28 2
+29 TX->1
+30 RX<-0
