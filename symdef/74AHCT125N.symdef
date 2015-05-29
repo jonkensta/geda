@@ -1,0 +1,50 @@
+# This is a sample symbol definition for documenting djboxsym.  Some
+# of the pins have been intentionally mistyped in order to demonstrate
+# all combinations of flags.  DO NOT USE AS A CP2201 REFERENCE!
+
+[labels]
+
+74AHCT125N
+refdes=U?
+! copyright=none
+! author=none
+! uselicense=unlimited
+! distlicense=GPL
+! device=74AHCT125N
+! description=none
+! footprint=DIP14
+
+[left]
+
+1  1\_OE\_
+2  1A
+
+4  2\_OE\_
+5  2A
+
+10 3\_OE\_
+9  3A
+
+13 4\_OE\_
+12 4A
+
+[right]
+
+3  1Y
+
+
+6  2Y
+
+
+8  3Y
+
+
+11 4Y
+
+[top]
+
+14 Vcc
+
+[bottom]
+
+7 GND
