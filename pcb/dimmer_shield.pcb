@@ -3,7 +3,7 @@
 # To read pcb files, the pcb version (or the git source date) must be >= the file version
 FileVersion[20091103]
 
-PCB["" 2700.00mil 2100.00mil]
+PCB["Dimmer Shield 1.0" 2700.00mil 2100.00mil]
 
 Grid[500.000000 0.0000 0.0000 1]
 PolyArea[200000000.000000]
