@@ -1,16 +1,5 @@
 v 20140308 2
 C 40000 40000 0 0 0 title-B.sym
-C 45000 48000 1 180 1 connector6-1.sym
-{
-T 46800 46200 5 10 0 0 180 6 1
-device=CONNECTOR_6
-T 45000 48200 5 10 1 1 180 6 1
-refdes=CONN1
-T 45300 46800 5 10 0 1 180 6 1
-footprint=SIP6
-T 45000 48000 5 10 0 1 0 0 1
-mouser=782-A000084
-}
 C 45000 45300 1 180 1 connector6-1.sym
 {
 T 46800 43500 5 10 0 0 180 6 1
@@ -35,17 +24,6 @@ refdes=CONN4
 T 51300 43600 5 10 0 1 0 0 1
 footprint=SIP8
 T 51500 45000 5 10 0 1 0 0 1
-mouser=782-A000085
-}
-C 51500 48100 1 180 0 connector8-1.sym
-{
-T 51400 44900 5 10 0 0 180 0 1
-device=CONNECTOR_8
-T 51000 48200 5 10 1 1 0 0 1
-refdes=CONN3
-T 51400 46700 5 10 0 1 0 0 1
-footprint=SIP8
-T 51500 48100 5 10 0 1 0 0 1
 mouser=782-A000085
 }
 T 51000 45400 9 10 1 0 0 0 1
@@ -251,4 +229,54 @@ T 49800 47400 5 10 0 0 180 0 1
 device=OUTPUT
 T 49100 47600 5 10 1 1 180 0 1
 refdes=GND2
+}
+C 51500 48700 1 180 0 connector10-1.sym
+{
+T 49600 45700 5 10 0 0 180 0 1
+device=CONNECTOR_10
+T 51000 48800 5 10 1 1 0 0 1
+refdes=CONN3
+T 51200 46700 5 10 0 1 0 0 1
+mouser=782-A000086
+T 51500 48700 5 10 0 0 0 0 1
+footprint=SIP10
+}
+C 49300 48400 1 0 0 nc-left-1.sym
+{
+T 49300 48800 5 10 0 0 0 0 1
+value=NoConnection
+T 49300 49200 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 49300 48100 1 0 0 nc-left-1.sym
+{
+T 49300 48500 5 10 0 0 0 0 1
+value=NoConnection
+T 49300 48900 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 45000 46100 1 0 0 connector8-1.sym
+{
+T 45100 49300 5 10 0 0 0 0 1
+device=CONNECTOR_8
+T 45100 48700 5 10 1 1 0 0 1
+refdes=CONN1
+T 45000 46100 5 10 0 0 0 0 1
+mouser=782-A000085
+T 45000 46100 5 10 0 0 0 0 1
+footprint=SIP8
+}
+C 46700 48300 1 0 0 nc-right-1.sym
+{
+T 46800 48800 5 10 0 0 0 0 1
+value=NoConnection
+T 46800 49000 5 10 0 0 0 0 1
+device=DRC_Directive
+}
+C 46700 48000 1 0 0 nc-right-1.sym
+{
+T 46800 48500 5 10 0 0 0 0 1
+value=NoConnection
+T 46800 48700 5 10 0 0 0 0 1
+device=DRC_Directive
 }
