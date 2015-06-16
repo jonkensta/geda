@@ -796,7 +796,7 @@ Via[2600.00mil 1800.00mil 120.00mil 30.00mil 0.0000 100.00mil "" ""]
 Via[2600.00mil 700.00mil 120.00mil 30.00mil 0.0000 100.00mil "" ""]
 Via[600.00mil 100.00mil 120.00mil 30.00mil 0.0000 100.00mil "" ""]
 
-Element["" "screw_5mm_2" "CONN2" "unknown" 64.7662mm 33.4879mm -116.11mil -269.55mil 0 99 ""]
+Element["" "screw_5mm_2" "CONN2" "unknown" 64.7662mm 33.4879mm -321.11mil -29.55mil 0 99 ""]
 (
 	Pin[-9.85mil -98.42mil 2.2320mm 20.00mil 2.3844mm 1.1000mm "2" "2" "thermal(1X)"]
 	Pin[-9.85mil 98.43mil 2.2320mm 20.00mil 2.3844mm 1.1000mm "1" "1" "thermal(0X)"]
@@ -1234,7 +1234,7 @@ Element["" "TO220" "S3/D1" "unknown" 1530.00mil 1620.00mil 330.00mil -35.00mil 0
 
 	)
 
-Element["" "screw_5mm_2" "CONN1" "unknown" 155.15mil 33.4411mm -2.7498mm -274.56mil 0 99 ""]
+Element["" "screw_5mm_2" "CONN1" "unknown" 155.15mil 33.4411mm 3.9812mm -44.56mil 0 99 ""]
 (
 	Pin[9.85mil 98.42mil 2.2320mm 20.00mil 2.3844mm 1.1000mm "2" "2" "thermal(1X)"]
 	Pin[9.85mil -98.43mil 2.2320mm 20.00mil 2.3844mm 1.1000mm "1" "1" "thermal(0X)"]
@@ -1575,8 +1575,6 @@ Layer(5 "top silk")
 	Line[725.00mil 1930.00mil 765.00mil 1930.00mil 10.00mil 20.00mil "clearline"]
 	Line[765.00mil 1930.00mil 745.00mil 1950.00mil 10.00mil 20.00mil "clearline"]
 	Line[745.00mil 1850.00mil 745.00mil 1840.00mil 10.00mil 20.00mil "clearline"]
-	Text[2360.00mil 1345.00mil 0 232 "+" "clearline"]
-	Text[2365.00mil 1165.00mil 0 188 "-" "clearline"]
 	Text[925.00mil 290.00mil 1 99 "AREF" "clearline"]
 	Text[1020.00mil 265.00mil 1 99 "GND" "clearline"]
 	Text[1225.00mil 215.00mil 1 77 "12" "clearline"]
@@ -1608,11 +1606,13 @@ Layer(5 "top silk")
 	Text[1120.00mil 220.00mil 1 98 "13" "clearline"]
 	Text[2160.00mil 210.00mil 0 99 "DIGITAL" "clearline"]
 	Text[660.00mil 845.00mil 0 121 "SPI EN" "clearline"]
-	Text[2450.00mil 1530.00mil 0 100 "OUTPUT" "clearline"]
-	Text[95.00mil 1535.00mil 0 100 "INPUT" "clearline"]
-	Text[305.00mil 34.4970mm 0 188 "-" "clearline"]
-	Text[305.00mil 29.1630mm 0 232 "+" "clearline"]
+	Text[65.00mil 1640.00mil 0 144 "INPUT" "clearline"]
+	Text[125.00mil 37.1640mm 0 430 "-" "clearline"]
+	Text[125.00mil 23.1940mm 0 430 "+" "clearline"]
 	Text[80.00mil 1840.00mil 0 108 "Dimmer Shield 1.0" "clearline"]
+	Text[2595.00mil 29.6380mm 2 430 "-" "clearline"]
+	Text[2595.00mil 43.6080mm 2 430 "+" "clearline"]
+	Text[2410.00mil 925.00mil 0 144 "OUTPUT" "clearline"]
 )
 NetList()
 (
