@@ -1609,10 +1609,10 @@ Layer(5 "top silk")
 	Text[65.00mil 1640.00mil 0 144 "INPUT" "clearline"]
 	Text[125.00mil 37.1640mm 0 430 "-" "clearline"]
 	Text[125.00mil 23.1940mm 0 430 "+" "clearline"]
-	Text[85.00mil 1840.00mil 0 129 "Dimmer Shield 1.0" "clearline"]
 	Text[2595.00mil 29.6380mm 2 430 "-" "clearline"]
 	Text[2595.00mil 43.6080mm 2 430 "+" "clearline"]
 	Text[2410.00mil 925.00mil 0 144 "OUTPUT" "clearline"]
+	Text[40.00mil 1825.00mil 0 142 "Dimmer Shield 1.1" "clearline"]
 )
 NetList()
 (
