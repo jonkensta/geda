@@ -1573,6 +1573,10 @@ Layer(2 "bottom")
 	(
 		[2365.00mil 1280.00mil] [315.00mil 1280.00mil] [315.00mil 20.00mil] [2365.00mil 20.00mil] 
 	)
+	Polygon("clearpoly")
+	(
+		[20.00mil 1320.00mil] [2680.00mil 1320.00mil] [2680.00mil 1875.00mil] [20.00mil 1875.00mil] 
+	)
 )
 Layer(3 "outline")
 (
