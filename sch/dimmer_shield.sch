@@ -407,8 +407,8 @@ netname=TRIAC_2
 }
 C 52300 44000 1 180 0 jumper3-1.sym
 {
-T 51900 43100 5 10 0 0 180 0 1
-footprint=H1x3-op
+T 51900 43100 5 10 0 1 180 0 1
+footprint=SIP3
 T 51900 42900 5 10 0 0 180 0 1
 device=JUMPER
 T 51800 44000 5 10 1 1 180 4 1
@@ -416,8 +416,8 @@ refdes=J3
 }
 C 52300 42900 1 180 0 jumper3-1.sym
 {
-T 51900 42000 5 10 0 0 180 0 1
-footprint=H1x3-op
+T 51900 42000 5 10 0 1 180 0 1
+footprint=SIP3
 T 51900 41800 5 10 0 0 180 0 1
 device=JUMPER
 T 51800 42900 5 10 1 1 180 4 1
