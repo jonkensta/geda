@@ -13,7 +13,7 @@ refdes=S?
 ! device=none
 ! description=none
 ! footprint=none
-! source=bulb_dimmer.sch
+! source=bulb_dimmer_sub.sch
 
 [left]
 
@@ -24,14 +24,12 @@ refdes=S?
 
 [right]
 
-4 ZC
-
-5 AC_OUT_P
-6 AC_OUT_N
+4 AC_OUT_P
+5 AC_OUT_N
 
 [top]
 
-7 VCC
+6 VCC
 
 [bottom]
-8 GND
+7 GND

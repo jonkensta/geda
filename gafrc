@@ -1,2 +1,2 @@
-(source-library "sch")
+(source-library "subsch")
 (component-library "sym" "sym")

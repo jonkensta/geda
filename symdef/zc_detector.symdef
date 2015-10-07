@@ -4,7 +4,7 @@
 
 [labels]
 
-arduino_shield
+zc_detector
 refdes=S?
 ! copyright=none
 ! author=none
@@ -13,40 +13,20 @@ refdes=S?
 ! device=none
 ! description=none
 ! footprint=none
-! source=arduino_shield_sub.sch
+! source=zc_detector_sub.sch
 
 [left]
 
-1  RESET
-2  3.3V
-3  5V
-4  GND
-6  GND
-7  Vin
-
-8  A0
-9  A1
-10 A2
-11 A3
-12 A4
-13 A5
+2 AC_IN_N
+1 AC_IN_P
 
 [right]
 
+3 ZC
 
-14 AREF
-15 GND
-16 13
-18 12
-19 11
-20 10
-21 9
-22 8
-23 7
-24 6
-25 5
-26 4
-27 3
-28 2
-29 TX->1
-30 RX<-0
+[top]
+
+4 VCC
+
+[bottom]
+5 GND

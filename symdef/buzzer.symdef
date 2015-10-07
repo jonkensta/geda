@@ -13,7 +13,7 @@ refdes=S?
 ! device=none
 ! description=none
 ! footprint=none
-! source=buzzer.sch
+! source=buzzer_sub.sch
 
 [left]
 
