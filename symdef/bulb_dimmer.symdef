@@ -18,6 +18,7 @@ refdes=S?
 [left]
 
 1 TRIAC
+6 TRIAC_GND
 
 3 AC_IN_N
 2 AC_IN_P
@@ -26,10 +27,3 @@ refdes=S?
 
 4 AC_OUT_P
 5 AC_OUT_N
-
-[top]
-
-6 VCC
-
-[bottom]
-7 GND
