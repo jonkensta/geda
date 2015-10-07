@@ -217,7 +217,7 @@ C 43700 49100 1 90 0 gnd-1.sym
 T 50000 40700 9 30 1 0 0 0 1
 Digital buzzer circuit
 T 50000 40400 9 10 1 0 0 0 1
-buzzer.sch
+buzzer_sub.sch
 C 51400 46600 1 0 0 capacitor-1.sym
 {
 T 51600 47300 5 10 0 0 0 0 1

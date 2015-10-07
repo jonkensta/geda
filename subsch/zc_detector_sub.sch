@@ -87,5 +87,5 @@ refdes=AC_IN_P
 T 50000 40700 9 30 1 0 0 0 1
 zero-crossing detector circuit
 T 50000 40400 9 10 1 0 0 0 1
-zc_detector.sch
+zc_detector_sub.sch
 N 47800 45100 47500 45100 4

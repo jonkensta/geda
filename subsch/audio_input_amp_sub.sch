@@ -116,7 +116,7 @@ C 47700 47900 1 270 0 vcc-1.sym
 T 50000 40700 9 30 1 0 0 0 1
 audio input amplifier
 T 50000 40400 9 10 1 0 0 0 1
-audio_input_amp.sch
+audio_input_amp_sub.sch
 N 46600 46200 46600 45800 4
 {
 T 46600 45700 5 10 1 1 180 3 1

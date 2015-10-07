@@ -208,7 +208,7 @@ refdes=RX<-0
 T 50000 40700 9 30 1 0 0 0 1
 Arduino shield headers
 T 50000 40400 9 10 1 0 0 0 1
-arduino_shield.sch
+arduino_shield_sub.sch
 C 46700 46800 1 0 0 out-1.sym
 {
 T 46700 47100 5 10 0 0 0 0 1
