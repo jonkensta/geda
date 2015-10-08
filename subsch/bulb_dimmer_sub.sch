@@ -165,5 +165,5 @@ C 42400 46300 1 0 0 in-1.sym
 T 42400 46600 5 10 0 0 0 0 1
 device=INPUT
 T 42400 46600 5 10 1 1 0 0 1
-refdes=GND
+refdes=TRIAC_GND
 }

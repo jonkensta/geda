@@ -40,7 +40,7 @@ refdes=CONN1
 T 45400 47950 5 10 0 0 180 0 1
 device=CONNECTOR_2
 T 45400 47750 5 10 0 0 180 0 1
-footprint=SIP2N
+footprint=SIP2
 }
 C 45700 48000 1 180 0 connector2-2.sym
 {
@@ -58,7 +58,7 @@ refdes=CONN3
 T 45400 44250 5 10 0 0 180 0 1
 device=CONNECTOR_2
 T 45400 44050 5 10 0 0 180 0 1
-footprint=SIP2N
+footprint=SIP2
 }
 C 45700 44300 1 180 0 connector2-2.sym
 {
@@ -74,7 +74,7 @@ C 51600 43900 1 0 0 connector1-2.sym
 T 51900 44750 5 10 0 0 0 0 1
 device=CONNECTOR_1
 T 51900 44950 5 10 0 0 0 0 1
-footprint=SIP1N
+footprint=SIP1
 T 52300 44800 5 10 1 1 0 6 1
 refdes=CONN5
 }
@@ -83,7 +83,7 @@ C 51600 42700 1 0 0 connector1-2.sym
 T 51900 43550 5 10 0 0 0 0 1
 device=CONNECTOR_1
 T 51900 43750 5 10 0 0 0 0 1
-footprint=SIP1N
+footprint=SIP1
 T 52300 43600 5 10 1 1 0 6 1
 refdes=CONN6
 }
@@ -96,7 +96,7 @@ C 51600 47600 1 0 0 connector1-2.sym
 T 51900 48450 5 10 0 0 0 0 1
 device=CONNECTOR_1
 T 51900 48650 5 10 0 0 0 0 1
-footprint=SIP1N
+footprint=SIP1
 T 52300 48500 5 10 1 1 0 6 1
 refdes=CONN7
 }
@@ -105,7 +105,7 @@ C 51600 46400 1 0 0 connector1-2.sym
 T 51900 47250 5 10 0 0 0 0 1
 device=CONNECTOR_1
 T 51900 47450 5 10 0 0 0 0 1
-footprint=SIP1N
+footprint=SIP1
 T 52300 47300 5 10 1 1 0 6 1
 refdes=CONN8
 }
