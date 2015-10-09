@@ -50,7 +50,7 @@ pintype=pas
 P 0 5500 300 5500 1 0 0
 {
 T 350 5500 9 10 1 1 0 1 1
-pinlabel=GND
+pinlabel=GND0
 T 200 5550 5 8 0 1 0 6 1
 pinseq=4
 T 200 5550 9 10 0 1 0 6 1
@@ -59,7 +59,7 @@ pintype=pas
 P 0 5100 300 5100 1 0 0
 {
 T 350 5100 9 10 1 1 0 1 1
-pinlabel=GND
+pinlabel=GND1
 T 200 5150 5 8 0 1 0 6 1
 pinseq=6
 T 200 5150 9 10 0 1 0 6 1
@@ -140,7 +140,7 @@ pintype=pas
 P 3700 6300 3400 6300 1 0 0
 {
 T 3350 6300 9 10 1 1 0 7 1
-pinlabel=GND
+pinlabel=GND2
 T 3500 6350 5 8 0 1 0 0 1
 pinseq=15
 T 3300 6350 9 10 0 1 0 6 1
