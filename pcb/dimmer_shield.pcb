@@ -917,8 +917,8 @@ Element["hidename" "HEADER16_2" "J3" "unknown" 160.00mil 970.00mil -155.00mil -5
 
 Element["hidename" "screw_5mm_2" "CONN1" "unknown" 65.7822mm 35.4729mm 177.17mil 19.69mil 1 100 ""]
 (
-	Pin[-9.85mil -98.42mil 88.00mil 20.00mil 94.00mil 44.00mil "2" "2" ""]
-	Pin[-9.85mil 98.43mil 88.00mil 20.00mil 94.00mil 44.00mil "1" "1" ""]
+	Pin[-9.85mil -98.42mil 88.00mil 30.00mil 94.00mil 44.00mil "2" "2" ""]
+	Pin[-9.85mil 98.43mil 88.00mil 28.00mil 94.00mil 44.00mil "1" "1" ""]
 	ElementLine [3.7498mm -196.85mil 3.7498mm 196.85mil 15.00mil]
 	ElementLine [-127.96mil -196.85mil -127.96mil 196.85mil 15.00mil]
 	ElementLine [88.58mil -196.85mil 88.58mil 196.85mil 15.00mil]
@@ -1030,7 +1030,8 @@ Layer(2 "bottom")
 (
 	Polygon("clearpoly")
 	(
-		[5.00mil 5.00mil] [2745.00mil 5.00mil] [2745.00mil 2095.00mil] [5.00mil 2095.00mil] 
+		[5.00mil 5.00mil] [2745.00mil 5.00mil] [2745.00mil 1200.00mil] [1965.00mil 1200.00mil] [1965.00mil 1595.00mil] 
+		[2745.00mil 1595.00mil] [2745.00mil 2095.00mil] [5.00mil 2095.00mil] 
 	)
 )
 Layer(3 "outline")
