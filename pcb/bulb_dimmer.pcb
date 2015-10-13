@@ -1229,6 +1229,7 @@ Layer(5 "top silk")
 (
 	Text[90.00mil 360.00mil 0 298 "N" "clearline"]
 	Text[100.00mil 960.00mil 0 298 "L" "clearline"]
+	Text[195.00mil 1355.00mil 0 206 "Bulb Dimmer Board V1.0" "clearline"]
 )
 NetList()
 (
