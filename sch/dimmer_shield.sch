@@ -111,13 +111,6 @@ value=NoConnection
 T 53100 50100 5 10 0 0 0 0 1
 device=DRC_Directive
 }
-C 52900 49500 1 180 0 nc-left-1.sym
-{
-T 52900 49100 5 10 0 0 180 0 1
-value=NoConnection
-T 52900 48700 5 10 0 0 180 0 1
-device=DRC_Directive
-}
 C 52900 49900 1 180 0 nc-left-1.sym
 {
 T 52900 49500 5 10 0 0 180 0 1
@@ -174,3 +167,4 @@ value=NoConnection
 T 53100 44500 5 10 0 0 0 0 1
 device=DRC_Directive
 }
+C 52700 49500 1 90 1 gnd-1.sym
