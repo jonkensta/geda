@@ -2,11 +2,14 @@ Import('env')
 
 import os
 
-schs = {os.path.splitext(node.name)[0]: node for node in env.Glob('sch/*.sch')}
+def basename(node):
+    return os.path.splitext(node.name)[0]
+
+schs = {basename(node): node for node in env.Glob('sch/*.sch')}
 env.Alias('mouser')
 mouser_boms = {name: env.MouserBOM(name+'.mouser.bom', sch) for name, sch in schs.iteritems()}
 
-pcbs = {os.path.splitext(node.name)[0]: node for node in env.Glob('pcb/*.pcb')}
+pcbs = {basename(node): node for node in env.Glob('pcb/*.pcb')}
 env.Alias('gerber')
 gerbers = {name: env.Gerber(name+'.gerber.zip', pcb) for name, pcb in pcbs.iteritems()}
 

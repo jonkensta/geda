@@ -59,18 +59,13 @@ def build_mouser_bom(target, source, env):
 
     with open(target, mode='rb') as csvfile:
         reader = csv.reader(csvfile, delimiter=':')
-
         labels = reader.next()
         indices = {label: index for index, label in enumerate(labels)}
-
         rows = [row for row in reader]
 
     with open(target, mode='wb') as csvfile:
-        writer = csv.writer(csvfile, delimiter=',')
-
+        writer = csv.writer(csvfile, delimiter='|')
         labels = ['mouser', 'qty']
-        writer.writerow(labels)
-
         for row in rows:
             writer.writerow([row[indices[label]] for label in labels])
 
