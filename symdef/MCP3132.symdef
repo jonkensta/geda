@@ -1,0 +1,36 @@
+# This is a sample symbol definition for documenting djboxsym.  Some
+# of the pins have been intentionally mistyped in order to demonstrate
+# all combinations of flags.  DO NOT USE AS A CP2201 REFERENCE!
+
+[labels]
+
+MCP4132
+refdes=U?
+! copyright=none
+! author=none
+! uselicense=unlimited
+! distlicense=GPL
+! device=none
+! description=none
+! footprint=DIP6
+
+[left]
+
+1 \_CS\_
+2 SCK
+3 SDI
+
+[right]
+
+7 SDO
+
+6 PB
+5 PW
+
+[top]
+
+8 Vdd
+
+[bottom]
+
+4 Vss
