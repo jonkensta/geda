@@ -1,0 +1,58 @@
+v 20140308 2
+B 300 300 3200 800 3 0 0 0 -1 -1 0 -1 -1 -1 -1 -1
+T 3700 1200 9 10 0 0 0 0 1
+source=audio_input_amplifier_sub.sch
+T 3700 1400 9 10 0 0 0 0 1
+footprint=none
+T 3700 1600 9 10 0 0 0 0 1
+description=none
+T 3700 1800 9 10 0 0 0 0 1
+device=none
+T 3700 2000 9 10 0 0 0 0 1
+distlicense=GPL
+T 3700 2200 9 10 0 0 0 0 1
+uselicense=unlimited
+T 3700 2400 9 10 0 0 0 0 1
+author=none
+T 3700 2600 9 10 0 0 0 0 1
+copyright=none
+T 1800 700 9 10 1 1 0 3 1
+audio_input_amp
+T 2500 1200 9 10 1 1 0 3 1
+refdes=S?
+P 0 700 300 700 1 0 0
+{
+T 350 700 9 10 1 1 0 1 1
+pinlabel=INPUT
+T 200 750 5 8 0 1 0 6 1
+pinseq=1
+T 200 750 9 10 0 1 0 6 1
+pintype=pas
+}
+P 1900 1400 1900 1100 1 0 0
+{
+T 1900 1050 9 10 1 1 0 5 1
+pinlabel=VCC
+T 1950 1150 5 8 0 1 0 0 1
+pinseq=2
+T 1800 50 9 10 0 1 0 6 1
+pintype=pas
+}
+P 1900 0 1900 300 1 0 0
+{
+T 1900 350 9 10 1 1 0 3 1
+pinlabel=GND
+T 1950 250 5 8 0 1 0 2 1
+pinseq=3
+T 1800 50 9 10 0 1 0 6 1
+pintype=pas
+}
+P 3800 700 3500 700 1 0 0
+{
+T 3450 700 9 10 1 1 0 7 1
+pinlabel=OUTPUT
+T 3600 750 5 8 0 1 0 0 1
+pinseq=4
+T 3400 750 9 10 0 1 0 6 1
+pintype=pas
+}

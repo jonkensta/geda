@@ -1,0 +1,32 @@
+# This is a sample symbol definition for documenting djboxsym.  Some
+# of the pins have been intentionally mistyped in order to demonstrate
+# all combinations of flags.  DO NOT USE AS A CP2201 REFERENCE!
+
+[labels]
+
+audio_input_amp
+refdes=S?
+! copyright=none
+! author=none
+! uselicense=unlimited
+! distlicense=GPL
+! device=none
+! description=none
+! footprint=none
+! source=audio_input_amplifier_sub.sch
+
+[left]
+
+1 INPUT
+
+[top]
+
+2 VCC
+
+[bottom]
+
+3 GND
+
+[right]
+
+4 OUTPUT
