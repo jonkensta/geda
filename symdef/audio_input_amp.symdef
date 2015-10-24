@@ -13,7 +13,7 @@ refdes=S?
 ! device=none
 ! description=none
 ! footprint=none
-! source=audio_input_amplifier_sub.sch
+! source=audio_input_amp_sub.sch
 
 [left]
 
