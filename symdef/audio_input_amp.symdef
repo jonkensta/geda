@@ -17,7 +17,7 @@ refdes=S?
 
 [left]
 
-1 INPUT
+1 LINE_IN
 
 [top]
 
@@ -29,4 +29,4 @@ refdes=S?
 
 [right]
 
-4 OUTPUT
+4 AMP_OUT
