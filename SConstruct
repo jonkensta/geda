@@ -63,6 +63,10 @@ def build_mouser_bom(target, source, env):
         indices = {label: index for index, label in enumerate(labels)}
         rows = [row for row in reader]
 
+    def has_mouser(row):
+        return row[indices['mouser']] != 'unknown'
+    rows = filter(has_mouser, rows)
+
     with open(target, mode='wb') as csvfile:
         writer = csv.writer(csvfile, delimiter='|')
         labels = ['mouser', 'qty']
