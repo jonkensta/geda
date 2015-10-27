@@ -1359,11 +1359,11 @@ Layer(1 "top")
 	Line[2035.00mil 609.91mil 2035.00mil 675.00mil 10.00mil 20.00mil "clearline"]
 	Line[2153.10mil 22.0520mm 54.9887mm 880.00mil 10.00mil 20.00mil "clearline"]
 	Line[54.9887mm 880.00mil 2230.00mil 880.00mil 10.00mil 20.00mil "clearline"]
-	Polygon("clearpoly")
+	Polygon("clearpoly,lock")
 	(
 		[1725.00mil 980.00mil] [2700.00mil 980.00mil] [2700.00mil 1180.00mil] [1725.00mil 1180.00mil] 
 	)
-	Polygon("clearpoly")
+	Polygon("clearpoly,lock")
 	(
 		[2700.00mil 380.00mil] [1725.00mil 380.00mil] [1725.00mil 580.00mil] [2700.00mil 580.00mil] 
 	)
@@ -1375,7 +1375,7 @@ Layer(2 "bottom")
 	Line[2535.00mil 1395.00mil 2535.00mil 1545.00mil 25.00mil 20.00mil ""]
 	Line[2455.00mil 1475.00mil 2610.00mil 1475.00mil 25.00mil 20.00mil ""]
 	Line[2080.00mil 1750.00mil 2080.00mil 1540.00mil 25.00mil 20.00mil ""]
-	Polygon("clearpoly")
+	Polygon("clearpoly,lock")
 	(
 		[0.0000 0.0000] [1510.00mil 0.0000] [1510.00mil 2100.00mil] [0.0000 2100.00mil] 
 	)
@@ -1383,7 +1383,7 @@ Layer(2 "bottom")
 	(
 		[1335.00mil 1695.00mil] [1760.00mil 1695.00mil] [1760.00mil 2100.00mil] [1335.00mil 2100.00mil] 
 	)
-	Polygon("clearpoly")
+	Polygon("clearpoly,lock")
 	(
 		[1725.00mil 0.0000] [2700.00mil 0.0000] [2700.00mil 1575.00mil] [1725.00mil 1575.00mil] 
 	)
@@ -1400,6 +1400,7 @@ Layer(4 "bottom silk")
 )
 Layer(5 "top silk")
 (
+	Text[75.00mil 1945.00mil 0 160 "Lumen Shield 1.0" "clearline"]
 )
 NetList()
 (
