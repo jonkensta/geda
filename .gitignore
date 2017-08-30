@@ -4,4 +4,4 @@
 *.net
 *.cmd
 .sconsign.dblite
-.gerber.zip
+*.gerber.zip
