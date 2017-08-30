@@ -1,3 +1,6 @@
 *~
 *#
+*.pcb.bak
+*.net
+*.cmd
 .sconsign.dblite
