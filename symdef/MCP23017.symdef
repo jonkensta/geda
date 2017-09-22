@@ -1,0 +1,67 @@
+# This is a sample symbol definition for documenting djboxsym.  Some
+# of the pins have been intentionally mistyped in order to demonstrate
+# all combinations of flags.  DO NOT USE AS A CP2201 REFERENCE!
+
+[labels]
+
+MCP23017
+refdes=U?
+! copyright=none
+! author=none
+! uselicense=unlimited
+! distlicense=GPL
+! device=MCP23017
+! description=none
+! footprint=DIP16
+
+[left]
+
+.bus
+SCK 12
+SDA 13
+
+.bus
+A2 17
+A1 16
+A0 15
+
+\_RESET\_ ! 18
+
+[right]
+
+.bus
+21 GPA0
+22 GPA1
+23 GPA2
+24 GPA3
+25 GPA4
+26 GPA5
+27 GPA6
+28 GPA7
+
+.bus
+1 GPB0
+2 GPB1
+3 GPB2
+4 GPB3
+5 GPB4
+6 GPB5
+7 GPB6
+8 GPB7
+
+.bus
+20 INTA
+19 INTB
+
+[top]
+
+9 Vdd
+
+[bottom]
+
+10 Vss
+
+[nc]
+
+11
+13
