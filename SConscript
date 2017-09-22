@@ -5,16 +5,18 @@ import os
 def basename(node):
     return os.path.splitext(node.name)[0]
 
-schs = {basename(node): node for node in env.Glob('sch/*.sch')}
+syms = SConscript('symdef/SConscript', exports=['env'])
+syms = env.Install(dir='sym', source=syms)
+
+schs = env.Glob('sch/*.sch')
+env.Depends(schs, syms)
+schs = {basename(node): node for node in schs}
 env.Alias('mouser')
 mouser_boms = {name: env.MouserBOM(sch) for name, sch in schs.iteritems()}
 
 pcbs = {basename(node): node for node in env.Glob('pcb/*.pcb')}
 env.Alias('gerber')
 gerbers = {name: env.Gerber(pcb) for name, pcb in pcbs.iteritems()}
-
-syms = SConscript('symdef/SConscript', exports=['env'])
-env.Alias('install', Install(dir='sym', source=syms))
 
 if not COMMAND_LINE_TARGETS:
     pass
