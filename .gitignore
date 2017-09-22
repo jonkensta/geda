@@ -5,3 +5,4 @@
 *.cmd
 .sconsign.dblite
 *.gerber.zip
+*.mouser.bom
