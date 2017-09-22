@@ -7,17 +7,17 @@ def basename(node):
 
 schs = {basename(node): node for node in env.Glob('sch/*.sch')}
 env.Alias('mouser')
-mouser_boms = {name: env.MouserBOM(name+'.mouser.bom', sch) for name, sch in schs.iteritems()}
+mouser_boms = {name: env.MouserBOM(sch) for name, sch in schs.iteritems()}
 
 pcbs = {basename(node): node for node in env.Glob('pcb/*.pcb')}
 env.Alias('gerber')
-gerbers = {name: env.Gerber(name+'.gerber.zip', pcb) for name, pcb in pcbs.iteritems()}
+gerbers = {name: env.Gerber(pcb) for name, pcb in pcbs.iteritems()}
 
 if not COMMAND_LINE_TARGETS:
     pass
-elif COMMAND_LINE_TARGETS[0] == 'gerber':
+elif 'gerber' in COMMAND_LINE_TARGETS:
     for name, gerber in gerbers.iteritems():
         env.Alias(name, gerber)
-elif COMMAND_LINE_TARGETS[0] == 'mouser':
+elif 'mouser' in COMMAND_LINE_TARGETS:
     for name, bom in mouser_boms.iteritems():
         env.Alias(name, bom)

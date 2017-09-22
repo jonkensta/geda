@@ -7,17 +7,25 @@ import tempfile
 import subprocess
 
 
-def build_gerber(target, source, env):
+def make_builder(**kwargs):
+    def decorator(action):
+        return Builder(action=action, **kwargs)
+    return decorator
 
-    class TempDir(object):
-        def __init__(self, *args, **kwargs):
-            self.abspath = tempfile.mkdtemp(*args, **kwargs)
 
-        def __enter__(self):
-            return self.abspath
+class TempDir(object):
+    def __init__(self, *args, **kwargs):
+        self.abspath = tempfile.mkdtemp(*args, **kwargs)
 
-        def __exit__(self, exc_type, exc_value, traceback):
-            shutil.rmtree(self.abspath)
+    def __enter__(self):
+        return self.abspath
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        shutil.rmtree(self.abspath)
+
+
+@make_builder(suffix='.gerber.zip', src_suffix='.pcb')
+def gerber(target, source, env):
 
     with TempDir() as outdir:
         base = os.path.splitext(source[0].name)[0]
@@ -25,11 +33,11 @@ def build_gerber(target, source, env):
 
         cmd = ' '.join([
             env['PCB'],
-            '-x gerber',
-            '--gerberfile ' + gerberfile,
-            '--name-style eagle',
+            '-x', 'gerber',
+            '--gerberfile', gerberfile,
+            '--name-style', 'eagle',
             source[0].abspath,
-            ])
+        ])
         subprocess.check_call(cmd, shell=True)
 
         with zipfile.ZipFile(target[0].abspath, 'w') as outzip:
@@ -38,24 +46,42 @@ def build_gerber(target, source, env):
                 outzip.write(outfile)
 
 
-def build_mouser_bom(target, source, env):
+class AttributesFile(object):
+
+    def __init__(self, attribs):
+        self._fo = open('attribs', mode='w')
+        self._fo.writelines(attribs)
+        self._fo.flush()
+
+    def close(self):
+        self._fo.close()
+        os.remove('attribs')
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        self.close()
+
+
+@make_builder(suffix='.mouser.bom', src_suffix='.sch')
+def mouser_bom(target, source, env):
     target = target[0].abspath
     source = source[0].abspath
 
-    with open('attribs', mode='w') as attribs:
-        attribs.write("mouser")
-
-    try:
+    with AttributesFile(['mouser']):
         cmd = ' '.join([
             env['GNETLIST'],
-            '-o ' + target,
-            '-g bom2',
+            '-o', target,
+            '-g', 'bom2',
             source,
-            '2>/dev/null',
-            ])
-        subprocess.check_call(cmd, shell=True)
-    finally:
-        os.remove('attribs')
+        ])
+
+        with open(os.devnull, 'w') as devnull:
+            subprocess.check_call(
+                cmd, shell=True,
+                stdout=devnull, stderr=subprocess.STDOUT
+            )
 
     with open(target, mode='rb') as csvfile:
         reader = csv.reader(csvfile, delimiter=':')
@@ -74,14 +100,29 @@ def build_mouser_bom(target, source, env):
             writer.writerow([row[indices[label]] for label in labels])
 
 
+@make_builder(suffix='.sym', src_suffix='.symdef')
+def gschem_sym(target, source, env):
+    source = source[0].abspath
+    target = target[0].abspath
+
+    cmd = ' '.join([env['DJBOXSYM'], source])
+    with open(target, mode='wb') as outfile:
+        subprocess.check_call(
+            cmd, shell=True,
+            stdout=outfile, stderr=subprocess.STDOUT
+        )
+
+
 env = Environment(
-    BUILDERS = {
-        'Gerber': Builder(action=build_gerber),
-        'MouserBOM': Builder(action=build_mouser_bom),
-        },
-    )
+    BUILDERS={
+        'Gerber': gerber,
+        'MouserBOM': mouser_bom,
+        'GschemSYM': gschem_sym,
+    },
+)
 
 env.Replace(PCB='pcb')
 env.Replace(GNETLIST='gnetlist')
+env.Replace(DJBOXSYM='djboxsym')
 
 SConscript('SConscript', exports=['env'])
