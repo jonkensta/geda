@@ -3,6 +3,7 @@
 *.pcb.bak
 *.net
 *.cmd
+symdef/*.sym
 .sconsign.dblite
 *.gerber.zip
 *.mouser.bom
