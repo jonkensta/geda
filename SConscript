@@ -13,6 +13,9 @@ pcbs = {basename(node): node for node in env.Glob('pcb/*.pcb')}
 env.Alias('gerber')
 gerbers = {name: env.Gerber(pcb) for name, pcb in pcbs.iteritems()}
 
+syms = SConscript('symdef/SConscript', exports=['env'])
+env.Alias('install', Install(dir='sym', source=syms))
+
 if not COMMAND_LINE_TARGETS:
     pass
 elif 'gerber' in COMMAND_LINE_TARGETS:

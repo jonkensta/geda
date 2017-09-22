@@ -1,5 +1,3 @@
 Import('env')
-
-sym = [env.GschemSYM(symdef) for symdef in Glob('*.symdef')]
-
-Export('sym')
+syms = [env.GschemSYM(symdef) for symdef in Glob('*.symdef')]
+Return('syms')
