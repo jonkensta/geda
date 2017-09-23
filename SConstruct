@@ -67,7 +67,7 @@ class AttributesFile(object):
 @make_builder(suffix='.mouser.bom', src_suffix='.sch')
 def mouser_bom(target, source, env):
     target = target[0].abspath
-    source = source[0].abspath
+    source = ' '.join([node.abspath for node in source])
 
     with AttributesFile(['mouser']):
         cmd = ' '.join([
@@ -100,16 +100,40 @@ def mouser_bom(target, source, env):
             writer.writerow([row[indices[label]] for label in labels])
 
 
+def gsch2pcb_emitter(target, source, env):
+    root = os.path.splitext(target[0].abspath)[0]
+    target.append(root + '.net')
+    target.append(root + '.cmd')
+    target.append(root + '.new.pcb')
+    return target, source
+
+
+@make_builder(src_suffix='.sym', emitter=gsch2pcb_emitter)
+def gsch2pcb(target, source, env):
+    source = ' '.join([node.abspath for node in source])
+    target = os.path.splitext(target[0].abspath)[0]
+
+    cmd = ' '.join([
+        env['GSCH2PCB'], '-o', target, source
+    ])
+
+    with open(os.devnull, 'w') as devnull:
+        subprocess.check_call(
+            cmd, shell=True,
+            stdout=devnull, stderr=subprocess.STDOUT
+        )
+
+
 @make_builder(suffix='.sym', src_suffix='.symdef')
 def gschem_sym(target, source, env):
     source = source[0].abspath
     target = target[0].abspath
 
     cmd = ' '.join([env['DJBOXSYM'], source])
-    with open(target, mode='wb') as outfile:
+    with open(target, mode='wb') as outfile, \
+            open(os.devnull, mode='wb') as devnull:
         subprocess.check_call(
-            cmd, shell=True,
-            stdout=outfile, stderr=subprocess.STDOUT
+            cmd, shell=True, stdout=outfile, stderr=devnull
         )
 
 
@@ -118,11 +142,13 @@ env = Environment(
         'Gerber': gerber,
         'MouserBOM': mouser_bom,
         'GschemSYM': gschem_sym,
+        'Gsch2PCB': gsch2pcb,
     },
 )
 
 env.Replace(PCB='pcb')
 env.Replace(GNETLIST='gnetlist')
+env.Replace(GSCH2PCB='gsch2pcb')
 env.Replace(DJBOXSYM='djboxsym')
 
 SConscript('SConscript', exports=['env'])

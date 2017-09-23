@@ -1,0 +1,11 @@
+Import('env', 'syms')
+
+import os
+
+schs = {}
+for name in ['dimmer_shield', 'lumen_shield']:
+    pattern = os.path.join(name, '*.sch')
+    schs[name] = env.Glob(pattern)
+    env.Depends(schs[name], syms)
+
+Return('schs')
