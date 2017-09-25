@@ -42,7 +42,7 @@ device=CONNECTOR_2
 T 46600 50150 5 10 0 0 0 0 1
 footprint=screw_5mm_2.fp
 T 46300 48700 5 10 0 1 0 0 1
-mouser=571-2828362
+mouser=651-1792863
 }
 C 49800 47200 1 0 0 bulb_dimmer.sym
 {
@@ -78,7 +78,7 @@ footprint=screw_5mm_2.fp
 T 54700 50000 5 10 1 1 0 6 1
 refdes=CONN05
 T 54000 48700 5 10 0 1 0 0 1
-mouser=571-2828362
+mouser=651-1792863
 }
 C 42100 44800 1 0 0 bulb_dimmer.sym
 {
@@ -114,7 +114,7 @@ footprint=screw_5mm_2.fp
 T 47000 47600 5 10 1 1 0 6 1
 refdes=CONN02
 T 46300 46300 5 10 0 1 0 0 1
-mouser=571-2828362
+mouser=651-1792863
 }
 C 49800 44800 1 0 0 bulb_dimmer.sym
 {
@@ -150,7 +150,7 @@ footprint=screw_5mm_2.fp
 T 54700 47600 5 10 1 1 0 6 1
 refdes=CONN06
 T 54000 46300 5 10 0 1 0 0 1
-mouser=571-2828362
+mouser=651-1792863
 }
 C 42100 42400 1 0 0 bulb_dimmer.sym
 {
@@ -186,7 +186,7 @@ footprint=screw_5mm_2.fp
 T 47000 45200 5 10 1 1 0 6 1
 refdes=CONN03
 T 46300 43900 5 10 0 1 0 0 1
-mouser=571-2828362
+mouser=651-1792863
 }
 C 42100 40000 1 0 0 bulb_dimmer.sym
 {
@@ -222,5 +222,5 @@ footprint=screw_5mm_2.fp
 T 47000 42800 5 10 1 1 0 6 1
 refdes=CONN04
 T 46300 41500 5 10 0 1 0 0 1
-mouser=571-2828362
+mouser=651-1792863
 }
