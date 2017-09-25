@@ -7,6 +7,10 @@ def basename(node):
 
 syms = SConscript(os.path.join('symdef', 'SConscript'), exports=['env'])
 syms = env.Install(dir='sym', source=syms)
+
+if GetOption('clean'):
+    env.Default(syms)
+
 schs = SConscript(os.path.join('sch', 'SConscript'), exports=['env', 'syms'])
 
 mouser_boms = {
@@ -14,16 +18,23 @@ mouser_boms = {
     for name, sch in schs.iteritems()
 }
 
+if GetOption('clean'):
+    env.Default(mouser_boms.values())
+
 pcbs = {
     name: env.Gsch2PCB(target=os.path.join('pcb', name+'.pcb'), source=sch)[0]
     for name, sch in schs.iteritems()
 }
 
+if GetOption('clean'):
+    env.Default(pcbs.values())
+
 for pcb in pcbs.itervalues():
     env.Precious(pcb)
     env.NoClean(pcb)
 
-env.Default(None)
+if not GetOption('clean'):
+    env.Default(None)
 
 if not COMMAND_LINE_TARGETS:
     pass
