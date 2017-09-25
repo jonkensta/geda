@@ -14,6 +14,7 @@ def make_builder(**kwargs):
 
 
 class TempDir(object):
+
     def __init__(self, *args, **kwargs):
         self.abspath = tempfile.mkdtemp(*args, **kwargs)
 
