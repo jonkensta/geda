@@ -29,6 +29,12 @@ gerbers = {
 }
 
 if GetOption('clean'):
-    env.Default(syms, schs.values(), pcbs.values(), gerbers.values())
+    env.Default(
+        syms,
+        schs.values(),
+        mouser_boms.values(),
+        pcbs.values(),
+        gerbers.values()
+    )
 else:
     env.Default(None)
