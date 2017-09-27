@@ -5,6 +5,7 @@ import os
 fpath = os.path.join('symdef', 'SConscript')
 syms = SConscript(fpath, exports=['env'])
 syms = env.Install(dir='sym', source=syms)
+env.Alias('symbols', syms)
 
 fpath = os.path.join('sch', 'SConscript')
 schs = SConscript(fpath, exports=['env', 'syms'])
