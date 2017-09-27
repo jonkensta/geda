@@ -36,15 +36,18 @@ def gerber(target, source, env):
             env['PCB'],
             '-x', 'gerber',
             '--gerberfile', gerberfile,
+            '--all-layers',
             '--name-style', 'eagle',
             source[0].abspath,
         ])
         subprocess.check_call(cmd, shell=True)
 
+
         with zipfile.ZipFile(target[0].abspath, 'w') as outzip:
             pattern = os.path.join(outdir, '*')
             for outfile in glob.glob(pattern):
-                outzip.write(outfile)
+                _, arcname = os.path.split(outfile)
+                outzip.write(outfile, arcname)
 
 
 class AttributesFile(object):
