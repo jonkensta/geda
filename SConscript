@@ -39,13 +39,13 @@ gerbers = {
     for name, pcb in pcbs.iteritems()
 }
 
-if GetOption('clean'):
-    env.Default(
-        syms,
-        schs.values(),
-        mouser_boms.values(),
-        pcbs.values(),
-        gerbers.values()
-    )
-else:
-    env.Default(None)
+clean_targets = [
+    syms,
+    schs.values(),
+    mouser_boms.values(),
+    pcbs.values(),
+    gerbers.values()
+]
+
+defaults = clean_targets if GetOption('clean') else []
+env.Default(*defaults)
