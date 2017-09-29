@@ -14,7 +14,7 @@ device=CONNECTOR_2
 T 42100 48150 5 10 0 1 180 0 1
 footprint=screw_5mm_2
 T 42400 49600 5 10 0 1 0 0 1
-mouser=571-1546216-2
+mouser=571-2828362
 T 41700 48300 5 10 1 1 180 6 1
 refdes=CONN1
 }
@@ -25,7 +25,7 @@ device=CONNECTOR_3
 T 53600 44150 5 10 0 1 180 0 1
 footprint=screw_5mm_3
 T 53900 46000 5 10 0 1 0 0 1
-mouser=571-1546216-3
+mouser=571-2828363
 T 53200 44300 5 10 1 1 180 6 1
 refdes=CONN2
 }
