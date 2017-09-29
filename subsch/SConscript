@@ -1,0 +1,8 @@
+Import('env')
+
+subschs = env.Glob('*_sub.sch')
+
+env.Clean(subschs, env.Glob('*_sub.sch~'))
+env.Clean(subschs, env.Glob('#*_sub.sch#'))
+
+Return('subschs')
