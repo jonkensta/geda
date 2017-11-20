@@ -894,7 +894,7 @@ Element["hidename" "LED_STRIP.fp" "CONN1" "unknown" 125.00mil 9060.00mil -65.00m
 (
 	Pad[-30.00mil 0.0000 30.00mil 0.0000 90.00mil 20.00mil 120.00mil "1" "1" ""]
 	Pad[-30.00mil 140.00mil 30.00mil 140.00mil 90.00mil 20.00mil 120.00mil "2" "2" ""]
-	Pad[-30.00mil 280.00mil 30.00mil 280.00mil 90.00mil 0.5588mm 120.00mil "3" "3" ""]
+	Pad[-30.00mil 280.00mil 30.00mil 280.00mil 90.00mil 22.00mil 120.00mil "3" "3" ""]
 
 	)
 Layer(1 "top" "copper")
@@ -918,6 +918,10 @@ Layer(2 "bottom" "copper")
 )
 Layer(3 "outline" "outline")
 (
+	Line[0.0000 9400.00mil 250.00mil 9400.00mil 10.00mil 20.00mil "clearline"]
+	Line[250.00mil 9400.00mil 250.00mil 0.0000 10.00mil 20.00mil "clearline"]
+	Line[250.00mil 0.0000 0.0000 0.0000 10.00mil 20.00mil "clearline"]
+	Line[0.0000 0.0000 0.0000 9400.00mil 10.00mil 20.00mil "clearline"]
 )
 Layer(4 "bottom silk" "silk")
 (
